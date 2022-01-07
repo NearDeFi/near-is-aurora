@@ -1,0 +1,18 @@
+[package]
+name = "contract"
+version = "0.1.0"
+authors = ["Eugene The Dream <ek@proximity.dev>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+near-sdk = "3.1.0"
+primitive-types = { version = "0.10.0", default-features = false, features = ["rlp"] }
+aurora-engine-types = { path = "../engine-types", default-features = false }
+hex = { version = "0.4", default-features = false, features = ["alloc"] }
+
+[features]
+# default = ["std"]
+# std = ["primitive-types/std"]
